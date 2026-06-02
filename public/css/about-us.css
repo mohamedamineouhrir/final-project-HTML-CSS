@@ -1,0 +1,764 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", "Poppins", sans-serif;
+    color: rgb(75, 85, 99);
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+*:hover {
+    transition: 0.4s;
+}
+
+/* !/ header */
+.theheader {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.navbar a {
+    font-weight: bold;
+    color: rgb(35, 64, 84);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.navbar a i {
+    font-size: 12px;
+}
+
+.aqua-link a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 46px;
+    padding: 0 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 191, 165);
+    color: white;
+    border: none;
+}
+
+.aqua-link a:hover {
+    background-color: rgb(5, 83, 97);
+}
+
+
+/* !main */
+
+
+/* todo/ hero header */
+.page-hero {
+    background: rgb(229, 248, 247);
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    color: rgb(35, 64, 84);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.breadcrumb a {
+    color: rgb(107, 114, 128);
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.breadcrumb i {
+    font-size: 12px;
+    color: rgb(156, 163, 175);
+}
+
+/* ?/ */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    display: inline-block;
+    color: rgb(0, 191, 165);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    color: rgb(35, 64, 84);
+    font-weight: 400;
+}
+
+/* todo/ welcome section */
+.about-welcome {
+    padding: 100px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+}
+
+.welcome-images {
+    width: 50%;
+    position: relative;
+}
+
+.main-img {
+    width: 85%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.sub-img {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 45%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.welcome-text {
+    width: 50%;
+}
+
+.welcome-text h2 {
+    font-size: 42px;
+    color: rgb(35, 64, 84);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.welcome-text p {
+    font-size: 16px;
+    color: rgb(107, 114, 128);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.welcome-text .lead-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(75, 85, 99);
+}
+
+
+/*!/ expertise section */
+
+.our-expertise {
+    padding: 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+.expertise-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.expertise-container .section-header {
+    margin-bottom: 60px;
+}
+
+.expertise-container h2 {
+    font-size: 38px;
+    color: rgb(35, 64, 84);
+    font-weight: 700;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 40px;
+}
+
+.skill-bar {
+    position: relative;
+    width: 100%;
+}
+
+.skill-bar h5 {
+    font-size: 16px;
+    color: rgb(35, 64, 84);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.de-progress {
+    width: 100%;
+    height: 6px;
+    background-color: rgb(226, 232, 240);
+    border-radius: 10px;
+    position: relative;
+}
+
+.de-progress .progress-bar {
+    height: 100%;
+    background-color: rgb(0, 191, 165);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.de-progress .value {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(0, 191, 165);
+}
+
+
+/* todo/ team section */
+.team-section {
+    padding: 100px 80px;
+    background-color: rgb(229, 248, 247);
+}
+
+.team-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.team-section .section-subtitle {
+    color: rgb(0, 191, 165);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.team-section .section-header h2 {
+    font-size: 38px;
+    color: rgb(35, 64, 84);
+    font-weight: 700;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.member-img img {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+
+.member-img::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: rgb(162, 224, 223);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.member-info {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.member-info h3 {
+    font-size: 20px;
+    color: rgb(35, 64, 84);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.member-info p {
+    font-size: 15px;
+    color: rgb(130, 138, 153);
+}
+
+.member-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.member-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    color: rgb(0, 191, 165);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.member-socials a:hover {
+    background-color: rgb(0, 191, 165);
+    color: white;
+}
+
+/* !stats section */
+.about-stats {
+    background-color: ;
+    padding: 80px 40px;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.stat-item h3 {
+    font-size: 52px;
+    color: rgb(5, 83, 97);
+    font-weight: 400;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-item p {
+    font-size: 16px;
+    color: rgb(132, 146, 166);
+    font-weight: 400;
+}
+
+
+/* !/ aqua section */
+
+.aqua-section {
+    background-color: rgb(1, 177, 176);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    color: white;
+}
+
+.aqua-section h2 {
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.aqua-section input {
+    background-color: rgb(1, 177, 176);
+    color: white;
+    font-size: medium;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.613);
+}
+
+.aqua-section input:hover {
+    background-color: rgb(1, 83, 96);
+    border: 1px solid rgb(1, 83, 96);
+    cursor: pointer;
+}
+
+/* !/footer */
+
+.thefooter {
+    background-color: rgb(5, 83, 97);
+    padding: 80px 40px;
+    color: rgb(255, 255, 255);
+}
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+
+
+.footer-about .footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.footer-socials a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: rgb(255, 255, 255);
+
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    color: rgb(0, 191, 165);
+    padding-left: 5px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact-icon {
+    color: rgb(0, 191, 165);
+    font-size: 18px;
+}
+
+.contact-info h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.sub-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    padding-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sub-footer ul {
+    display: flex;
+    gap: 20px;
+
+}
+
+.sub-footer a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sub-footer a:hover {
+    color: rgb(0, 191, 165);
+}
+
+
+/* !/ media queries */
+
+/* todoo/ tablets */
+@media (max-width: 1100px) {
+    .theheader {
+        padding: 20px 40px;
+    }
+
+    .about-welcome {
+        padding: 80px 40px;
+    }
+
+    .welcome-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .welcome-images,
+    .welcome-text {
+        width: 100%;
+    }
+
+    .experience-badge {
+        top: auto;
+        bottom: 20px;
+        left: -10px;
+    }
+
+    .our-expertise {
+        padding: 80px 40px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-section {
+        padding: 80px 40px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .stat-item {
+        flex: 1 1 40%;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-about {
+        grid-column: 1 / 2;
+    }
+
+}
+
+/* todo/ mobile */
+/* ? mobile */
+@media (max-width: 768px) {
+
+    /* ?/ header */
+    .theheader {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* ?/ hero */
+    .page-hero {
+        padding: 40px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 32px;
+    }
+
+    /* ?/ welcome section */
+    .about-welcome {
+        padding: 50px 20px;
+    }
+
+    .welcome-text h2 {
+        font-size: 32px;
+    }
+
+    .welcome-features ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* ?/ expertise section */
+    .our-expertise {
+        padding: 60px 20px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    /* ?/ stats section */
+    .about-stats {
+        padding: 60px 20px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .stat-item {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .stat-item h3 {
+        font-size: 44px;
+    }
+
+    /* ?/ team section */
+    .team-section {
+        padding: 60px 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-section .section-header h2 {
+        font-size: 30px;
+    }
+
+    /* ?/ aqua section */
+    .aqua-section {
+        flex-direction: column;
+        gap: 25px;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .aqua-section h2 {
+        font-size: large;
+    }
+
+    /* ?/ footer */
+    .thefooter {
+        padding: 60px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-about {
+        grid-column: 1 / 2;
+    }
+
+    .sub-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+
+
+
+}
