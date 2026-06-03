@@ -1,0 +1,569 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", "Poppins", sans-serif;
+    color: rgb(75, 85, 99);
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+*:hover {
+    transition: 0.4s;
+}
+
+/* !/ header */
+.theheader {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.navbar a {
+    font-weight: bold;
+    color: rgb(35, 64, 84);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.navbar a i {
+    font-size: 12px;
+}
+
+/* todo/ dropdown */
+.drop-list {
+    position: relative;
+    display: block !important;
+}
+
+.dropdown-menu {
+    list-style: none;
+    background-color: white;
+    border: 1px solid rgb(226, 232, 240);
+    width: 160px;
+    padding: 10px 15px;
+    position: absolute;
+    top: calc(100% + 10px);
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+    
+    z-index: 100;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: none !important;
+}
+
+.dropdown-menu li {
+    margin-top: 10px;
+}
+
+.dropdown-menu li:first-child {
+    margin-top: 0;
+}
+
+.dropdown-menu a {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(75, 85, 99);
+}
+
+.dropdown-menu a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.drop-list:hover .dropdown-menu {
+    display: block !important;
+}
+
+/* .aqua-link a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 191, 165);
+    color: white;
+    border: none;
+}
+
+.aqua-link a:hover {
+    background-color: rgb(5, 83, 97);
+} */
+
+/* todo/ */
+.aqua-link a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 191, 165);
+    color: transparent;
+    /* color: white; */
+    border: none;
+    position: relative;
+    overflow: hidden;
+    perspective: 500px;
+}
+
+/*?/ the cube effect text */
+
+
+.aqua-link a:hover {
+    background-color: rgb(5, 83, 97);   
+}
+
+
+
+.theheader .aqua-link a {
+    content: "Book Appointment";
+}
+
+
+
+.aqua-link a {}
+
+.aqua-link a::before,
+.aqua-link a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    backface-visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.aqua-link a::before {
+    transform: rotateX(0deg) translateZ(23px);
+}
+
+.aqua-link a::after {
+    background-color: rgb(5, 83, 97);
+    transform: rotateX(-90deg) translateZ(23px);
+}
+
+.theheader .aqua-link a::before,
+.theheader .aqua-link a::after {
+    content: "Book Your Visit";
+}
+
+.hero-text-area .aqua-link a::before,
+.hero-text-area .aqua-link a::after {
+    content: "Book Appointment";
+}
+
+.aqua-link a:hover::before {
+    transform: rotateX(90deg) translateZ(23px);
+}
+
+.aqua-link a:hover::after {
+    transform: rotateX(0deg) translateZ(23px);
+}
+
+.aqua-link a:active {
+    transform: scale(0.96);
+    transition: transform 0.1s;
+}
+
+/* !/ main */
+
+
+/* todo/ hero header */
+.page-hero {
+    background: rgb(229, 248, 247);
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    color: rgb(35, 64, 84);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.breadcrumb a {
+    color: rgb(107, 114, 128);
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.breadcrumb i {
+    font-size: 12px;
+    color: rgb(156, 163, 175);
+}
+
+
+/* todo/ testimonials section */
+.testimonials-section {
+    padding: 100px 80px;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    border: 1px solid rgb(226, 232, 240);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewer img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-info h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(35, 64, 84);
+    line-height: 1.2;
+}
+
+.reviewer-info span {
+    font-size: 13px;
+    color: rgb(156, 163, 175);
+}
+
+.google-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 15px;
+}
+
+.stars i {
+    color: rgb(251, 191, 36);
+    font-size: 14px;
+}
+
+.testimonial-card p {
+    font-size: 15px;
+    color: rgb(107, 114, 128);
+    line-height: 1.7;
+}
+
+
+/* !/ aqua section */
+.aqua-section {
+    background-color: rgb(1, 177, 176);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    color: white;
+}
+
+.aqua-section h2 {
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.aqua-section input {
+    background-color: rgb(1, 177, 176);
+    color: white;
+    font-size: medium;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.613);
+}
+
+.aqua-section input:hover {
+    background-color: rgb(1, 83, 96);
+    border: 1px solid rgb(1, 83, 96);
+    cursor: pointer;
+}
+
+
+/* !/ footer */
+.thefooter {
+    background-color: rgb(5, 83, 97);
+    padding: 80px 40px;
+    color: white;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1.5fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-about .footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    color: white;
+    font-size: 20px;
+}
+
+.footer-socials a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact-icon {
+    color: rgb(0, 191, 165);
+    font-size: 18px;
+}
+
+.contact-info h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.sub-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    padding-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sub-footer ul {
+    display: flex;
+    gap: 20px;
+}
+
+.sub-footer a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sub-footer a:hover {
+    color: rgb(0, 191, 165);
+}
+
+
+/* !/ media queries */
+
+/* todo/ tablets */
+@media (max-width: 1100px) {
+    .theheader {
+        padding: 20px 40px;
+    }
+
+    .testimonials-section {
+        padding: 80px 40px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-about {
+        grid-column: 1 / 2;
+    }
+}
+
+/* todo/ mobile */
+@media (max-width: 768px) {
+
+    /* ?/ header */
+    .theheader {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* ?/ hero */
+    .page-hero {
+        padding: 40px 20px;
+    }
+
+    .page-hero h1 {
+        font-size: 32px;
+    }
+
+    /* ?/ testimonials section */
+    .testimonials-section {
+        padding: 60px 20px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ?/ aqua section */
+    .aqua-section {
+        flex-direction: column;
+        gap: 25px;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .aqua-section h2 {
+        font-size: large;
+    }
+
+    /* ?/ footer */
+    .thefooter {
+        padding: 60px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-about {
+        grid-column: 1 / 2;
+    }
+
+    .sub-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
