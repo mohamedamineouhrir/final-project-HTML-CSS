@@ -329,19 +329,26 @@ ul {
 }
 
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
     gap: 40px;
 }
 
 .skill-item {
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-end;
+    /* width: 30%; */
+    /* height: 100%; */
 }
 
 .skill-labels {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
     font-weight: bold;
     color: rgb(35, 64, 84);
