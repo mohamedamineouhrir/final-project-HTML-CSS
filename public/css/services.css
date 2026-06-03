@@ -24,9 +24,9 @@ ul {
 }
 
 
-/* ! header */
+/* !/ header */
 .theheader {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,20 +34,9 @@ ul {
     padding: 20px 80px;
 }
 
-
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: rgb(35, 64, 84);
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 8px;
-}
-
-.icon-logo {
-    color: rgb(0, 191, 165);
-    font-size: 32px;
 }
 
 .navbar ul {
@@ -61,7 +50,6 @@ ul {
     color: rgb(35, 64, 84);
     font-size: 15px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 5px;
 }
@@ -74,8 +62,52 @@ ul {
     font-size: 12px;
 }
 
+/* todo/ dropdown */
+.drop-list {
+    position: relative;
+    display: block !important;
+}
 
-.primary-btn {
+.dropdown-menu {
+    list-style: none;
+    background-color: white;
+    border: 1px solid rgb(226, 232, 240);
+    width: 160px;
+    padding: 10px 15px;
+    position: absolute;
+    top: calc(100% + 10px);
+    top: 100%;
+    left: 0;
+    border-radius: 8px;
+    
+    z-index: 100;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: none !important;
+}
+
+.dropdown-menu li {
+    margin-top: 10px;
+}
+
+.dropdown-menu li:first-child {
+    margin-top: 0;
+}
+
+.dropdown-menu a {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(75, 85, 99);
+}
+
+.dropdown-menu a:hover {
+    color: rgb(0, 191, 165);
+}
+
+.drop-list:hover .dropdown-menu {
+    display: block !important;
+}
+
+/* .aqua-link a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -85,17 +117,97 @@ ul {
     font-weight: bold;
     cursor: pointer;
     background-color: rgb(0, 191, 165);
-    
+    color: white;
     border: none;
 }
-.primary-btn a {
-    text-decoration: none;
-    color: white;
+
+.aqua-link a:hover {
+    background-color: rgb(5, 83, 97);
+} */
+
+/* todo/ */
+.aqua-link a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 191, 165);
+    color: transparent;
+    /* color: white; */
+    border: none;
+    position: relative;
+    overflow: hidden;
+    perspective: 500px;
 }
 
-.primary-btn:hover {
+/*?/ the cube effect text */
+
+
+.aqua-link a:hover {
     background-color: rgb(5, 83, 97);   
 }
+
+
+
+.theheader .aqua-link a {
+    content: "Book Appointment";
+}
+
+
+
+.aqua-link a {}
+
+.aqua-link a::before,
+.aqua-link a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    backface-visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.aqua-link a::before {
+    transform: rotateX(0deg) translateZ(23px);
+}
+
+.aqua-link a::after {
+    background-color: rgb(5, 83, 97);
+    transform: rotateX(-90deg) translateZ(23px);
+}
+
+.theheader .aqua-link a::before,
+.theheader .aqua-link a::after {
+    content: "Book Your Visit";
+}
+
+.hero-text-area .aqua-link a::before,
+.hero-text-area .aqua-link a::after {
+    content: "Book Appointment";
+}
+
+.aqua-link a:hover::before {
+    transform: rotateX(90deg) translateZ(23px);
+}
+
+.aqua-link a:hover::after {
+    transform: rotateX(0deg) translateZ(23px);
+}
+
+.aqua-link a:active {
+    transform: scale(0.96);
+    transition: transform 0.1s;
+}
+
 
 /* !/main */
 
@@ -375,7 +487,6 @@ ul {
 
 .footer-links a:hover {
     color: rgb(0, 191, 165);
-    padding-left: 5px;
 }
 
 .footer-contact {
